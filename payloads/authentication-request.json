@@ -1,0 +1,24 @@
+{
+  "agent": "brands/BRAND_ID/agents/AGENT_ID",
+  "conversationId": "CONVERSATION_ID",
+  "customAgentId": "CUSTOM_AGENT_ID",
+  "requestId": "REQUEST_ID",
+  "authenticationResponse": {
+    "code": "AUTHORIZATION_CODE",
+    "redirect_uri": "REDIRECT_URI",
+    "errorDetails": {
+      "error": "ERROR",
+      "errorDescription": "ERROR_DESCRIPTION"
+    }
+  },
+  "context": {
+    "entryPoint": "CONVERSATION_ENTRYPOINT",
+    "placeId": "LOCATION_PLACE_ID",
+    "resolvedLocale": "MATCH_OF_USER_AND_AGENT_LOCALES",
+    "userInfo": {
+      "displayName": "USER_NAME",
+      "userDeviceLocale": "USER_LOCALE"
+    }
+  },
+  "sendTime": "SEND_TIME"
+}

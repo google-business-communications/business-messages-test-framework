@@ -1,0 +1,23 @@
+{
+  "agent": "brands/BRAND_ID/agents/AGENT_ID",
+  "conversationId": "CONVERSATION_ID",
+  "customAgentId": "CUSTOM_AGENT_ID",
+  "requestId": "REQUEST_ID",
+  "suggestionResponse": {
+    "message": "conversations/CONVERSATION_ID/messages/MESSAGE_ID",
+    "postbackData": "POSTBACK_DATA",
+    "createTime": "RESPONSE_CREATE_TIME",
+    "text": "SUGGESTION_TEXT",
+    "suggestionType": "SUGGESTION_TYPE"
+  },
+  "context": {
+    "entryPoint": "CONVERSATION_ENTRYPOINT",
+    "placeId": "LOCATION_PLACE_ID",
+    "resolvedLocale": "MATCH_OF_USER_AND_AGENT_LOCALES",
+    "userInfo": {
+      "displayName": "USER_NAME",
+      "userDeviceLocale": "USER_LOCALE"
+    }
+  },
+  "sendTime": "SEND_TIME"
+}

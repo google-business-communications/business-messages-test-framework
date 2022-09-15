@@ -1,0 +1,22 @@
+{
+  "agent": "brands/BRAND_ID/agents/AGENT_ID",
+  "conversationId": "CONVERSATION_ID",
+  "customAgentId": "CUSTOM_AGENT_ID",
+  "requestId": "REQUEST_ID",
+  "message": {
+    "messageId": "MESSAGE_ID",
+    "name": "conversations/CONVERSATION_ID/messages/MESSAGE_ID",
+    "text": "https://storage.googleapis.com/business-messages-us/936640919331/jzsu6cdguNGsBhmGJGuLs1DS?x-goog-algorithm\u003dGOOG4-RSA-SHA256\u0026x-goog-credential\u003duranium%40rcs-uranium.iam.gserviceaccount.com%2F20190826%2Fauto%2Fstorage%2Fgoog4_request\u0026x-goog-date\u003d20190826T201038Z\u0026x-goog-expires\u003d604800\u0026x-goog-signedheaders\u003dhost\u0026x-goog-signature\u003d89dbf7a74d21ab42ad25be071b37840a544a43d68e67270382054e1442d375b0b53d15496dbba12896b9d88a6501cac03b5cfca45d789da3e0cae75b050a89d8f54c1ffb27e467bd6ba1d146b7d42e30504c295c5c372a46e44728f554ba74b7b99bd9c6d3ed45f18588ed1b04522af1a47330cff73a711a6a8c65bb15e3289f480486f6695127e1014727cac949e284a7f74afd8220840159c589d48dddef1cc97b248dfc34802570448242eac4d7190b1b10a008404a330b4ff6f9656fa84e87f9a18ab59dc9b91e54ad11ffdc0ad1dc9d1ccc7855c0d263d93fce6f999971ec79879f922b582cf3bb196a1fedc3eefa226bb412e49af7dfd91cc072608e98",
+    "createTime": "MESSAGE_CREATE_TIME"
+  },
+  "context": {
+    "entryPoint": "CONVERSATION_ENTRYPOINT",
+    "placeId": "LOCATION_PLACE_ID",
+    "resolvedLocale": "MATCH_OF_USER_AND_AGENT_LOCALES",
+    "userInfo": {
+      "displayName": "USER_NAME",
+      "userDeviceLocale": "USER_LOCALE"
+    }
+  },
+  "sendTime": "SEND_TIME"
+}

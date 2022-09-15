@@ -1,0 +1,15 @@
+{
+  "agent": "brands/BRAND_ID/agents/AGENT_ID",
+  "conversationId": "CONVERSATION_ID",
+  "customAgentId": "CUSTOM_AGENT_ID",
+  "sendTime": "SEND_TIME",
+  "receipts" : {
+    "receipts": [
+      {
+        "message": "conversations/CONVERSATION_ID/messages/MESSAGE_ID",
+        "receiptType": "DELIVERED"
+      }
+    ],
+    "createTime": "RECEIPTS_CREATION_TIME"
+  }
+}

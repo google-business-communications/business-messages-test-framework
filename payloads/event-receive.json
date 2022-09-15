@@ -1,0 +1,12 @@
+{
+  "agent": "brands/BRAND_ID/agents/AGENT_ID",
+  "requestId": "REQUEST_ID",
+  "conversationId": "CONVERSATION_ID",
+  "customAgentId": "CUSTOM_AGENT_ID",
+  "sendTime": "SEND_TIME",
+  "userStatus": {
+    "isTyping": "BOOLEAN",
+    "requestedLiveAgent": "BOOLEAN",
+    "createTime": "CREATION_TIME"
+  }
+}

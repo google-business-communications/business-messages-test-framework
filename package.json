@@ -1,0 +1,20 @@
+{
+  "name": "bm-test-framework",
+  "version": "1.0.0",
+  "description": "Simple Integration testing framework for your Business Messages integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/mocha/bin/_mocha",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin" : {
+    "bm-test-framework" : "./node_modules/mocha/bin/_mocha"
+  },
+  "author": "Vittorio Banfi",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^10.0.0",
+    "superagent": "^8.0.0",
+    "uuid": "^8.3.2"
+  }
+}
