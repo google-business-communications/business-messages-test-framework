@@ -11,12 +11,9 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
+//const BmTestFramework = import('../index')
+import BmTestFramework from '../index.js'
 
-const assert = require('assert');
-const BmTestFramework = require('../index')
-const fs = require('fs')
-const { dirname } = require('path')
-const appDir = dirname(require.main.filename)
 
 describe('Test the endpoint', function () {
   const bmTestFramework = new BmTestFramework();
