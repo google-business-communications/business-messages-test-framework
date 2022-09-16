@@ -66,20 +66,20 @@ This repository will contain a Dockerfile that dockerizes this test and allows y
 
 By default, the conversation-id of the tests will be CONVERSATION-ID. This is not a very realistic ID, as the best practice for conversation-ids is to use a UUID. In order to have your tests run with realistic UUID as conversation-ids, you can run your test with this environment variable:
 
-`BMTF_RANDOMUUID=true`
+`BMTF_RANDOM_UUID=true`
 
 Which will switch the conversation-ids used in your tests to realistic-looking UUID. Please note that these IDs will not be valid, but they are formatted as if they were. The complete command will be:
 
 
 ```bash
-BMTF_ENDPOINT_URL=http://localhost:3000/callback BMTF_RANDOMUUID=true bm-test-framework
+BMTF_ENDPOINT_URL=http://localhost:3000/callback BMTF_RANDOM_UUID=true bm-test-framework
 ```
 
 ### Changing the timeout
 
 You can change the timeout settings by adding this environment variable:
 `BMTF_TIMEOUT`
-So for example, to set it to 4000ms, your command will be:
+So for example, to set it to 4000 milliseconds, your command will be:
 
 ```bash
 BMTF_ENDPOINT_URL=http://localhost:3000/callback BMTF_TIMEOUT=4000 bm-test-framework

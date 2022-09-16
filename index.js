@@ -12,13 +12,16 @@
  * the License.
  */
 
-const fs = require('fs')
-const superagent = require('superagent');
-const { v4: uuidv4 } = require('uuid');
-var path = require('path');
+import fs from 'fs'
+import superagent from 'superagent';
+import { v4 as uuidv4 } from 'uuid';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const appRoot = path.resolve(__dirname);
 
-function BmTestFramework(config) {
+export default function BmTestFramework(config) {
   if (!this.endpointUrl || this.endpointUrl == null) {
     if (!process.env.BMTF_ENDPOINT_URL) {
       throw new Error("config.endpointUrl is required. You can also define it an env variable: BMTF_ENDPOINT_URL")
@@ -28,7 +31,7 @@ function BmTestFramework(config) {
   } else {
     this.endpointUrl = config.endpointUrl;
   }
-  if (process.env.BMTF_RANDOMUUID == true) {
+  if (process.env.BMTF_RANDOM_UUID === true) {
     this.randomUUID = true;
   }
 
@@ -38,31 +41,29 @@ function BmTestFramework(config) {
 
   this.sendPayload = function(payloadName) {
     const self = this;
-    let promisedPayload = new Promise(function(resolve, reject) {
+    const promisedPayload = new Promise(function(resolve, reject) {
       try {
         const jsonObject = JSON.parse(fs.readFileSync(`${appRoot}/payloads/${payloadName}`))
-        if (self.randomUUID) {
-          jsonObject.conversationId = uuidv4()
-        }
         if (!jsonObject) {
           reject(new Error(`The payload ${payloadName} is invalid or does not exist`))
+        }
+        if (self.randomUUID) {
+          jsonObject.conversationId = uuidv4()
         }
         superagent
         .post(self.endpointUrl)
         .send(jsonObject)
-        .end((err, res) => {
+        .end(function(err, res) {
           if (err) {
             reject(err)
           } else {
             resolve()
           }
         })
-      }catch(e) {
+      } catch(e) {
         reject(e)
       }
     })
     return promisedPayload;
   }
 }
-
-module.exports = BmTestFramework;

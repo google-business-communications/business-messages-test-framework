@@ -7,11 +7,13 @@
     "start": "./node_modules/mocha/bin/_mocha",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "exports" : "./index.js",
   "bin" : {
     "bm-test-framework" : "./node_modules/mocha/bin/_mocha"
   },
   "author": "Vittorio Banfi",
   "license": "MIT",
+  "type" : "module",
   "dependencies": {
     "mocha": "^10.0.0",
     "superagent": "^8.0.0",
