@@ -11,27 +11,26 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-//const BmTestFramework = import('../index')
-import BmTestFramework from '../index.js'
 
+import BmTestFramework from '../index.js';
 
 describe('Test the endpoint', function () {
   const bmTestFramework = new BmTestFramework();
   if (process.env.BMTF_TIMEOUT) {
-    this.timeout(process.env.BMTF_TIMEOUT)
+    this.timeout(process.env.BMTF_TIMEOUT);
   }
   describe('Sending payloads to '+bmTestFramework.endpointUrl, function () {
-    const payloads = bmTestFramework.payloads()
+    const payloads = bmTestFramework.payloads();
     payloads.forEach(function(payload) {
       it(`${payload} should return 200`, function(done) {
         bmTestFramework.sendPayload(payload)
         .then(function(complete) {
-          done()
+          done();
         })
         .catch(function(err) {
-          done(err)
-        })
+          done(err);
+        });
       })
-    })
+    });
   });
 });

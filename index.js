@@ -12,7 +12,7 @@
  * the License.
  */
 
-import fs from 'fs'
+import fs from 'fs';
 import superagent from 'superagent';
 import { v4 as uuidv4 } from 'uuid';
 import path from 'path';
@@ -24,9 +24,9 @@ const appRoot = path.resolve(__dirname);
 export default function BmTestFramework(config) {
   if (!this.endpointUrl || this.endpointUrl == null) {
     if (!process.env.BMTF_ENDPOINT_URL) {
-      throw new Error("config.endpointUrl is required. You can also define it an env variable: BMTF_ENDPOINT_URL")
+      throw new Error("config.endpointUrl is required. You can also define it an env variable: BMTF_ENDPOINT_URL");
     } else {
-      this.endpointUrl = process.env.BMTF_ENDPOINT_URL
+      this.endpointUrl = process.env.BMTF_ENDPOINT_URL;
     }
   } else {
     this.endpointUrl = config.endpointUrl;
@@ -36,7 +36,7 @@ export default function BmTestFramework(config) {
   }
 
   this.payloads = function() {
-    return fs.readdirSync(`${appRoot}/payloads/`)
+    return fs.readdirSync(`${appRoot}/payloads/`);
   }
 
   this.sendPayload = function(payloadName) {
@@ -45,10 +45,10 @@ export default function BmTestFramework(config) {
       try {
         const jsonObject = JSON.parse(fs.readFileSync(`${appRoot}/payloads/${payloadName}`))
         if (!jsonObject) {
-          reject(new Error(`The payload ${payloadName} is invalid or does not exist`))
+          reject(new Error(`The payload ${payloadName} is invalid or does not exist`));
         }
         if (self.randomUUID) {
-          jsonObject.conversationId = uuidv4()
+          jsonObject.conversationId = uuidv4();
         }
         superagent
         .post(self.endpointUrl)
@@ -59,9 +59,9 @@ export default function BmTestFramework(config) {
           } else {
             resolve()
           }
-        })
+        });
       } catch(e) {
-        reject(e)
+        reject(e);
       }
     })
     return promisedPayload;
