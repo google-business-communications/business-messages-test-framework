@@ -16,12 +16,13 @@
 
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { spawn } from 'node:child_process';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const appRoot = path.resolve(__dirname);
-import { spawn } from 'node:child_process';
 
-const ls = spawn(appRoot+'/node_modules/mocha/bin/_mocha', [appRoot+'/test/index-test.js']);
+const ls = spawn(appRoot + '/node_modules/mocha/bin/_mocha', [appRoot + '/test/index-test.js']);
 
 ls.stdout.on('data', (data) => {
   console.log(data.toString());
@@ -32,8 +33,8 @@ ls.stderr.on('data', (data) => {
 });
 
 ls.on('close', (code) => {
-  if (code == 0) {
-    console.log('Tests completed successfully')
+  if (code === 0) {
+    console.log('Tests completed successfully');
   } else {
     console.log(`Tests exited with error code ${code}`);
   }
