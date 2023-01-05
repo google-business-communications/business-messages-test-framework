@@ -87,10 +87,10 @@ BMTF_ENDPOINT_URL=http://localhost:3000/callback BMTF_TIMEOUT=4000 bm-test-frame
 
 ## Contributing
 
-Contributions welcome! See the [Contributing Guide](https://github.com/google-business-communications/businessmessages-test-framework/CONTRIBUTING.md).
+Contributions welcome! See the [Contributing Guide](https://github.com/google-business-communications/business-messages-test-framework/blob/main/CONTRIBUTING.md).
 
 ## License
 
 Apache Version 2.0
 
-See [LICENSE](https://github.com/google-business-communications/bm-test-framework-nodejs/LICENSE)
+See [LICENSE](https://github.com/google-business-communications/business-messages-test-framework/blob/main/LICENSE)
